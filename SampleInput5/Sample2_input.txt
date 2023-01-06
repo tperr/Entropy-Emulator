@@ -1,0 +1,19 @@
+clock reset
+memory create 0x100
+memory reset
+imemory create 0x100
+imemory reset
+imemory set 0x0 file Sample2_Instructions.txt
+cpu reset
+cache reset
+cache on
+iodev reset
+iodev load Sample2_IODev.txt
+clock tick 10
+memory dump 0x0 0x8
+cache dump
+iodev dump
+clock tick 30
+memory dump 0x0 0x8
+cache dump
+iodev dump

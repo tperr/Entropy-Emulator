@@ -1,0 +1,21 @@
+clock reset
+memory create 0x100
+memory reset
+imemory create 0x100
+imemory reset
+imemory set 0x0 file Sample4_Instructions.txt
+cpu reset
+memory set 0x0 0x8 0x1 0x2 0x3 0x4 0x5 0x6 0x7 0x8
+memory dump 0x0 0x10
+cache reset
+cache on
+clock tick 3
+cache dump
+clock tick 10
+cache dump
+clock tick 64
+cache dump
+clock tick 128
+cache dump
+cache off
+memory dump 0x0 0x10
